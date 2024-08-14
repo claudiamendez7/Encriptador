@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x.icon" href="img/favicon.ico">
     <title>Encriptador Challenge 1.0</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +14,18 @@
   <body>
     <header>
         <div class="header">
-            <img class="logo" src="img/Frame 6.png" alt="logo allura" />
+            <a href="#" rel="">
+                <img class="logo" src="img/Frame 6.png" alt="logo alura" />
+            </a>
         </div>
     </header>
+
     <main>
         <div class="main">
             <div class="left">
-                <textarea class="ingreso-texto" id="ingresoTexto" placeholder="Ingrese el texto aquí"></textarea>
+                <textarea class="ingreso-texto" id="ingresoTexto" placeholder="Ingresa el texto aquí"></textarea>
                 <div class="left-footer">
-                    <iconify-icon icon="zondicons:exclamation-solid"  style="color: #202020"></iconify-icon>
+                    <img src="img/aviso.svg" alt="aviso alerta">
                     <span class="left-info">Solo letras minúsculas y sin acentos</span>
                     <div class="left-botones">
                         <button class="btn-encriptar" id="btnEncriptar">Encriptar</button>
@@ -30,16 +34,21 @@
                 </div>
             </div>
             <div class="right" id="right">
-                <img class="muneco" id="muneco" src="img/Muñeco.png" alt="">
+                <img class="muneco" id="muneco" src="img/Muñeco.png" alt="imagen muñeco">
                     <textarea class="mensaje-final" id="mensajeFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
                     <p class="right-info" id="rightInfo">Ingresa el texto que desees encriptar o desencriptar.</p>              
                 <button class="btn-copiar hidden" id="btnCopiar">Copiar</button>
             </div>
         </div>
     </main>
-    <footer class="footer">
-        Creado por @clauDev__
+
+    <footer>
+        <p class="copyright">&copy; copyright 2024 Desarrollado por @clauDev__</p>
+        <a href="https://github.com/claudiamendez7" rel="" target="_blank">
+            <img src="img/github.svg" alt="logo github" class="git">
+        </a> 
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

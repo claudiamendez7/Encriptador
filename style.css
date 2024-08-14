@@ -2,13 +2,26 @@
   --color-primario: #0a3871;
   --color-secundario: #f3f5fc;
   --color-terciario: #495057;
+  --color-active: #e5e5e5;
 
   --color-background: #d8dfe8;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: var(--color-secundario);
+  height: 100%;
 }
+
+img {
+  max-width: 100%;
+}
+
 textarea {
   font-family: "Inter", sans-serif;
 }
@@ -39,7 +52,8 @@ textarea {
 }
 
 .ingreso-texto {
-  width: 80%;
+  width: 85%;
+  height: 20%;
   font-size: 32px;
   color: var(--color-primario);
   background: none;
@@ -75,12 +89,29 @@ textarea {
   border-radius: 24px;
 }
 
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+  transform: scale(0.97);
+}
+
 .btn-encriptar {
   background-color: var(--color-primario);
   color: white;
 }
+.btn.encriptar:active {
+  box-shadow: inset 2px 2px 4px var(--color-active);
+  inset: -3px -4px 8px var(--color-primario);
+  color: var(--color-background);
+}
+
 .btn-desencriptar {
   background-color: var(--color-background);
+  color: var(--color-primario);
+}
+.btn.desencriptar:active {
+  box-shadow: inset 2px 2px 4px var(--color-primario);
+  inset: -3px -4px 8px var(--color-active);
   color: var(--color-primario);
 }
 
@@ -134,13 +165,18 @@ textarea {
 }
 
 footer {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin-top: 40px;
+  margin-top: 15px;
+  padding: 10px;
+  color: var(--color-terciario);
+  font-size: 13px;
+  text-align: center;
+}
+
+.git {
+  width: 20px;
+}
+.git:hover {
+  transform: scale(1.1);
 }
 
 /* RESPONSIVE */
@@ -170,8 +206,15 @@ footer {
     margin: auto 16px;
   }
   .btn-encriptar,
-  .btn-desencriptar {
+  .btn-desencriptar,
+  .btn-copiar {
     max-width: none;
     width: 100%;
+  }
+  .mensaje-final {
+    font-size: 18px;
+  }
+  .right-info {
+    font-size: 14px;
   }
 }
