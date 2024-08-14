@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador Challenge 1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <div class="header">
+            <img class="logo" src="img/Frame 6.png" alt="logo allura" />
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="left">
+                <textarea class="ingreso-texto" id="ingresoTexto" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="left-footer">
+                    <iconify-icon icon="zondicons:exclamation-solid"  style="color: #202020"></iconify-icon>
+                    <span class="left-info">Solo letras minúsculas y sin acentos</span>
+                    <div class="left-botones">
+                        <button class="btn-encriptar" id="btnEncriptar">Encriptar</button>
+                        <button class="btn-desencriptar" id="btnDesencriptar">Desencriptar</button">
+                    </div>
+                </div>
+            </div>
+            <div class="right" id="right">
+                <img class="muneco" id="muneco" src="img/Muñeco.png" alt="">
+                    <textarea class="mensaje-final" id="mensajeFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+                    <p class="right-info" id="rightInfo">Ingresa el texto que desees encriptar o desencriptar.</p>              
+                <button class="btn-copiar hidden" id="btnCopiar">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        Creado por @clauDev__
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
