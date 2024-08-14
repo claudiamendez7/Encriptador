@@ -35,7 +35,10 @@ const reset = () => {
   ingresoTexto.focus();
 };
 btnEncriptar.addEventListener("click", () => {
-  const texto = ingresoTexto.value.toLowerCase();
+  const texto = ingresoTexto.value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[$\.¿\?¡@#%&*()^""´{/}\[\]|<,>:;\u0300-\u036f]/g, "");
   if (texto != "") {
     function encriptar(newText) {
       for (let i = 0; i < matrizCodigo.length; i++) {
